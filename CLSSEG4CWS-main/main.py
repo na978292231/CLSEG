@@ -239,7 +239,7 @@ if use_bigram:
 else:
     bi_embed = None
 fitlog.add_hyper(args)
-model = NFLAT(tag_vocab=vocabs['label'], char_embed=embeddings['lattice'], word_embed=embeddings['lattice'],
+model = CLSEG(tag_vocab=vocabs['label'], char_embed=embeddings['lattice'], word_embed=embeddings['lattice'],
               num_layers=num_layers, hidden_size=d_model, n_head=n_heads,
               feedforward_dim=dim_feedforward, dropout=dropout, max_seq_len=max_seq_len,max_lex_num=max_lex_num,
               after_norm=after_norm, attn_type=attn_type,
